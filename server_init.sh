@@ -22,18 +22,6 @@
 
 
 sudo apt-get update
+sudo apt-get install -y net-tools
 sudo apt-get install -y apache2
 sudo apt-get install -y curl
-
-echo 10.20.30.40 server | sudo tee -a /etc/hosts
-echo ServerName WebSever1 | sudo tee -a /etc/apache2/apache2.conf
-#sudo cp -R ~/webexample/website/* /var/www/
-
-
-# Start the webserver
-# Needed for Apache 2.2
-sudo /usr/sbin/apache2ctl restart
-# Needed for Apache 2.4
-sudo /etc/init.d/apache2 force-reload
-# Needed for both
-sudo service apache2 restart
